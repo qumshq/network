@@ -54,12 +54,12 @@ class Env:
         return graphP, edges1
 
     def nextGraph(self):
-        self.graphIndex += 1
         graph_file = self.nameList[self.graphIndex]
         self.graph, self.edges = self.constrctGraph(np.loadtxt(graph_file))
         self.nodeNum = len(self.graph.nodes())
         self.seeds = set()
         self.influence = 0
+        self.graphIndex += 1
 
     def reset(self):
         self.seeds = set([])
@@ -132,6 +132,5 @@ class Env:
 if __name__ == "__main__":
     env = Env()
     for i in range(10):
-    # for i in range(9):
         env.degree()
         env.nextGraph()

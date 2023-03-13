@@ -10,6 +10,7 @@ import networkx as nx
 
 def embedding_main(graph_file):
     parser = argparse.ArgumentParser()
+    #parser 命名空间，在cmd中运行python时可以给这些参数，不给就会按照default处理
     # print(parser)
     parser.add_argument('--embedding_dim',type=int, default=64)
     parser.add_argument('--batch_size', default=128)
@@ -22,14 +23,14 @@ def embedding_main(graph_file):
     parser.add_argument('--graph_file', default=graph_file)
 
     # 统计有多少个节点
-    edges = np.loadtxt(graph_file)
-    graph = nx.DiGraph()
-    graph.add_weighted_edges_from(edges)
+    edges = np.loadtxt(graph_file)#form txt get array
+    graph = nx.DiGraph()#创建nx有向图对象
+    graph.add_weighted_edges_from(edges)#degs需要n*3为的数组表示有向图的起点-终点-权重
     nodeNum = len(graph.nodes())
 
     # +1 是对应着虚拟节点
-    parser.add_argument('--num_nodes',type=int, default= 500)
-    args = parser.parse_args()
+    parser.add_argument('--num_nodes',type=int, default= 128)
+    args = parser.parse_args()#args中存储了parser加入的变量
     print('args:',args)
     if args.mode == 'train':
         train(args)
@@ -85,12 +86,15 @@ def train(args):
                             f.write(str(normalized_embedding[i][j])+' ')
                         if i != (args.num_nodes-1):
                             f.write('\n')
+                            print('called')
 
 
 # def test(args):
 #     pass
 
 if __name__ == '__main__':
-    graph_file = '../data/test_graph.txt'
+    # graph_file = '../data/test_graph.txt'
+    graph_file = r'E:\coursewares\SchoolCourses\大三了唉下\人工智能技术驱动的网络信息挖掘\230221_一些初步资料\line-master\data\co-authorship_graph.pkl'
+    # 是否需要将所有的节点度算出并加入到最后一列
     # embedding_main(graph_file,32)
-    embedding_main('../data/graphwithVN.txt')
+    embedding_main('../data/graphwithVN.txt')#这里应该有一个n*3维的矩阵，但是俺没有

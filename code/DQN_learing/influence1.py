@@ -14,19 +14,20 @@ class Env:
         self.graph_dim = 64
         self.nodeNum = 4941
         self.maxSeedsNum = 50
-        self.networkName = 'power'
+        # self.networkName = 'power'
+        self.networkName = 'GN'
         # self.nameList = ['../data/'+self.networkName+'/' + str(self.nodeNum) + '/0.00.txt', '../data/'+self.networkName+'/' + str(self.nodeNum) + '/0.05.txt',
         #                  '../data/'+self.networkName+'/' + str(self.nodeNum) + '/0.10.txt', '../data/'+self.networkName+'/' + str(self.nodeNum) + '/0.15.txt',
         #                  '../data/'+self.networkName+'/' + str(self.nodeNum) + '/0.20.txt', '../data/'+self.networkName+'/' + str(self.nodeNum) + '/0.25.txt',
         #                  '../data/'+self.networkName+'/' + str(self.nodeNum) + '/0.30.txt', '../data/'+self.networkName+'/' + str(self.nodeNum) + '/0.35.txt',
         #                  '../data/'+self.networkName+'/' + str(self.nodeNum) + '/0.40.txt', '../data/'+self.networkName+'/' + str(self.nodeNum) + '/0.45.txt',
         #                  '../data/'+self.networkName+'/' + str(self.nodeNum) + '/0.50.txt']
-        # self.nameList = ['../data/'+self.networkName+'/network1.txt', '../data/'+self.networkName+'/network2.txt',
-        #                  '../data/'+self.networkName+'/network3.txt', '../data/'+self.networkName+'/network4.txt',
-        #                  '../data/'+self.networkName+'/network5.txt', '../data/'+self.networkName+'/network6.txt',
-        #                  '../data/'+self.networkName+'/network7.txt', '../data/'+self.networkName+'/network8.txt',
-        #                  '../data/'+self.networkName+'/network9.txt', '../data/'+self.networkName+'/network10.txt']
-        self.nameList = ['../data/'+self.networkName+".txt"]
+        self.nameList = ['../data/'+self.networkName+'/network1.txt', '../data/'+self.networkName+'/network2.txt',
+                          '../data/'+self.networkName+'/network3.txt', '../data/'+self.networkName+'/network4.txt',
+                          '../data/'+self.networkName+'/network5.txt', '../data/'+self.networkName+'/network6.txt',
+                          '../data/'+self.networkName+'/network7.txt', '../data/'+self.networkName+'/network8.txt',
+                          '../data/'+self.networkName+'/network9.txt', '../data/'+self.networkName+'/network10.txt']
+        # self.nameList = ['../data/'+self.networkName+".txt"]
 
         self.localInfluenceList = np.zeros(self.nodeNum)-1  # init with -1, which means this node has not been recorded
         self.oneHopInfluenceList = np.zeros(self.nodeNum)-1  # init with -1, which means this node has not been recorded

@@ -1,7 +1,7 @@
 import networkx as nx
 import numpy as np
-from create_graph import create_graph_edgelist
-
+# from create_graph import create_graph_edgelist
+# create_graph可能是作者自己写的一个文件，去找一下论文的源码看看？
 
 class AliasSampling:
 
@@ -39,7 +39,8 @@ class AliasSampling:
 
 class GraphData:
     def __init__(self,graph_file,num_nodes):
-        self.g = create_graph_edgelist(graph_file,num_nodes)
+        # self.g = create_graph_edgelist(graph_file,num_nodes)# 从graph中选出指定的num_nodes个节点的
+        self.g = nx.read_gpickle(graph_file)
         self.num_of_nodes = self.g.number_of_nodes()        #节点数
         self.num_of_edges = self.g.number_of_edges()        #边数
         self.edges_raw = self.g.edges(data=True)            #边集

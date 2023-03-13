@@ -31,9 +31,9 @@ class Agent:
         self.evalStep = env.maxSeedsNum // 10    # step num during evaluation
 
         #Init population
-        self.pop = []
-        for _ in range(self.pop_size):
-            self.pop.append(DQN(self.dim))
+        self.pop = []# pop_size个DQN网络对象
+        for _ in range(self.pop_size):# 这里会产生pop_size个DQN网络对象(default as 100)
+            self.pop.append(DQN(self.dim))# 3层的神经网络DQN对象
         self.all_fitness = []
 
         #Turn off gradients and put in eval mode
