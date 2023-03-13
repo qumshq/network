@@ -1,10 +1,14 @@
 ## 文件结构
 
+==new_vison_attempt==文件夹改写后的模型
+
+DQN_learning是原来的模型一起传上去了
+
 |-- new_vison_attempt
 |   |-- DQN_Model.py
 |   |-- SSNE.py
-|   |-- __pycache__
-|   |-- degree.py
+|   |-- \_\_pycache\__
+|   |-- degree.py 度，好像在模型中没有用到
 |   |-- influence1.py
 |   |-- line.py
 |   |-- line_model.py
@@ -29,4 +33,4 @@ line.py是主要文件
 
 ## run_er_debugl.py
 
-调用其他所有文件，将data中的图使用line进行编码
+调用其他所有文件，将data中的图使用line进行编码，然后训练DQN网络选出种子节点并保存结果
