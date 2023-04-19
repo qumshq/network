@@ -4,11 +4,14 @@ import pickle
 
 class DBLPDataLoader:
     def __init__(self, graph_file, num_nodes=128):
-        # self.g = create_graph_edgelist(graph_file,num_nodes)# 从graph中选出指定的num_nodes个节点的
+        # self.g = create_graph_edgelist(graph_file,num_nodes)# 猜测是从graph中选出指定的num_nodes个节点的
         # self.g = nx.read_gpickle(graph_file)---networkx 1.9之前的用法
         # self.g = gpickle.read_gpickle(graph_file)---networkx 2.6之前的用法
+        # with open(r'E:\coursewares\SchoolCourses\大三了唉下\人工智能技术驱动的网络信息挖掘\230221_一些初步资料\ERL-d1\code\data\new_graph.pkl', 'rb') as f:
+        #     self.g = pickle.load(f)# 从文件中读取图
         with open(graph_file, 'rb') as f:
             self.g = pickle.load(f)# 从文件中读取图
+            
         # # 要从g中选出num_nodes个节点
         # nodes = list(self.g.nodes)[:num_nodes]
         # # 创建一个新的子图
