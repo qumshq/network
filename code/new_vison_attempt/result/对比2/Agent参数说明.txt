@@ -1,0 +1,5 @@
+选择10个节点
+100个种群
+self.learningTimes = 8
+lr = 0.001
+res：最终结果完全一致，但是平均值情况sdne better

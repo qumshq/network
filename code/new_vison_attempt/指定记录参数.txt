@@ -1,0 +1,8 @@
+物流数据的line编码和sdne编码：
+
+    gra_p = ['../data/生成数据/Fried_edgelist_224']
+    
+    # embed_p = ['../data/生成数据/embedding.txt']
+    embed_p = ['../data/生成数据/Fried_embedding_100dim_10000rounds.txt']
+    
+    removed_p = ['../data/生成数据/Fried_edgelist_224_removed.txt']

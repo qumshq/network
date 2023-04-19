@@ -1,0 +1,14 @@
+sdne编码尚未收敛
+
+Epoch : 9995 loss : 62153554.000
+one epoch
+Epoch : 9996 loss : 62106142.000
+one epoch
+Epoch : 9997 loss : 62058586.000
+one epoch
+Epoch : 9998 loss : 62011301.000
+one epoch
+Epoch : 9999 loss : 61964224.000
+one epoch
+Epoch : 10000 loss : 61916692.000
+exceed epochs limit terminating

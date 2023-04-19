@@ -1,0 +1,4 @@
+GN：无权图，原附与line模型；128节点
+LFR：无权图，原附与line模型；128节点
+SF_NetData：1_edgelist是无权图；100节点
+embedding_result_line_SF：使用line对图进行编码，具体是每次传一张图入line然后进行一定轮数的训练，训练好后对该图形进行编码，保存下来的编码结果存为.txt文件。

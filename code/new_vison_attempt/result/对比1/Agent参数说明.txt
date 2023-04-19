@@ -1,0 +1,5 @@
+选择25个节点
+50个种群
+self.learningTimes = 10
+lr = 0.001
+res：sdne better
